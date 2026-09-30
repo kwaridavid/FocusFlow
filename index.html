@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FocusFlow</title>
+<meta name="description" content="Plan. Focus. Get Things Done.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🎯</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"></head>
+<body>
+<div class="app">
+<nav aria-label="Main"><div class="brand">FocusFlow</div><div class="tag">Plan. Focus. Get Things Done.</div>
+<a href="#/dashboard" data-r="dashboard">Dashboard</a><a href="#/tasks" data-r="tasks">Tasks</a><a href="#/notes" data-r="notes">Notes</a><a href="#/calendar" data-r="calendar">Calendar</a><a href="#/focus" data-r="focus">Focus</a><a href="#/settings" data-r="settings">Settings</a></nav>
+<main id="main"></main></div>
+<dialog id="dlg"><h2 id="dt">New task</h2>
+<label for="t-title">Title</label><input id="t-title" maxlength="200">
+<label for="t-desc">Description</label><textarea id="t-desc" rows="3"></textarea>
+<div class="f2"><div><label for="t-pri">Priority</label><select id="t-pri"><option>Low</option><option selected>Medium</option><option>High</option></select></div>
+<div><label for="t-cat">Category</label><input id="t-cat" list="cats" placeholder="e.g. School"><datalist id="cats"></datalist></div>
+<div><label for="t-due">Due date</label><input type="date" id="t-due"></div><div><label for="t-time">Due time</label><input type="time" id="t-time"></div></div>
+<label for="t-rec">Repeats</label><select id="t-rec"><option value="">Never</option><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="monthly">Monthly</option></select>
+<div class="bar" style="margin:16px 0 0;justify-content:flex-end"><button class="btn" data-act="dlgx">Cancel</button><button class="btn p" data-act="dlgsave">Save task</button></div></dialog>
+<div id="toast" role="status"></div>
+<script src="assets/app.js"></script></body></html>
